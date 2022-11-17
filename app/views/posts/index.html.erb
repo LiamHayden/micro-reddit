@@ -1,0 +1,19 @@
+<div>
+  <div>
+    <div>
+      <p>Newest</p>
+      <p>Oldest</p>
+    </div>
+
+    <div>
+      <% @posts.each do |post| %>
+        <div>
+          <p> <%= post.user.username %> </p>
+          <p> <%= post.title %> </p>
+          <p> <%= post.content %> </p>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>
