@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="col">
+    <div class="">
+      <div class="row shadow pt-2">
+        <button class="m-2 col-1 btn border border-primary rounded-pill text-primary">Newest</button>
+        <button class="m-2 col-1 btn border border-primary rounded-pill text-primary">Oldest</button>
+        <%# <ul class="dropdown-menu">
+          <li class="dropdown-item" href="#">Ireland</li>
+          <li class="dropdown-item" href="#">England</li>
+          <li class="dropdown-item" href="#">America</li>
+          <li class="dropdown-item" href="#">Sanda</li>
+        </ul>
+        <button class="m-2 col-1 btn border border-primary rounded-pill text-primary">New</button>
+        <button class="m-2 col-1 btn border border-primary rounded-pill text-primary">Top</button> %>
+      </div>
+
+      <div class="col">
+        <% @posts.each do |post| %>
+          <div class="row shadow p-5 mt-5">
+            <p class="text-secondary">u/<%= post.user.username %> </p>
+            <p class="fw-bold fs-3 text-decoration-underline"> <%= post.title %> </p>
+            <p class="fs-4"> <%= post.content %> </p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
