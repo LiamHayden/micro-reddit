@@ -1,7 +1,7 @@
 <div class="container">
   <div class="col">
     <div class="">
-      <div class="row shadow pt-2">
+      <div class="row shadow pt-2 bg-light rounded">
         <button class="m-2 col-1 btn border border-primary rounded-pill text-primary">Newest</button>
         <button class="m-2 col-1 btn border border-primary rounded-pill text-primary">Oldest</button>
         <%# <ul class="dropdown-menu">
@@ -16,7 +16,7 @@
 
       <div class="col">
         <% @posts.each do |post| %>
-          <div class="row shadow p-5 mt-5">
+          <div class="row shadow p-5 mt-5 bg-light rounded">
             <p class="text-secondary">u/<%= post.user.username %> </p>
             <p class="fw-bold fs-3 text-decoration-underline"> <%= post.title %> </p>
             <p class="fs-4"> <%= post.content %> </p>
