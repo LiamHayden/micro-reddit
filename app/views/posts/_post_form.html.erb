@@ -1,0 +1,15 @@
+<%= form_with model: @post, date: { turbo: false } do |form| %>
+  <div class="py-4">
+    <%= form.label "Title:", class: "form-label" %>
+    <%= form.text_field :title, class: "form-control", placeholder: "Title", require: true %>
+  </div>
+
+  <div class="pb-4">
+    <%= form.label "Content:", class: "form_label" %>
+    <%= form.text_area :content, class: "form-control", placeholder: "Text", require: true %>
+  </div>
+
+  <div class="pb-4">
+    <%= form.submit "Post", class: "btn btn-primary text-white rounded-pill px-5" %>
+  </div>
+<% end %>
