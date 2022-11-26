@@ -1,5 +1,5 @@
 <div class="container row mb-3 bg-light mw-100">
-  <p class="h3 text-start col-sm ps-5 pt-3">micro reddit</p>
+  <%= link_to "micro reddit", "/posts/index", class: "h3 text-start col-sm ps-5 pt-3 text-dark text-decoration-none" %>
 
   <form class="col-sm pt-3">
     <input class="form-control rounded-pill" type="text" placeholder="Search">
@@ -7,14 +7,13 @@
 
   <ul class="nav col-sm justify-content-end">
     <li class="nav-item">
-      <%# if user_signed_in? %>
-      <%#  destroy_user_seassion_path, method: :delete, %>
+      <% if user_signed_in? %>
         <%= link_to "Profile", "#", class: "btn btn-primary text-white rounded-pill px-5 m-3" %>
-        <%= link_to "Sign Out", "#", class: "btn btn-outline-primary rounded-pill px-5 m-3" %>
-      <%# else %>
-        <%# link_to "Sign Up", class: "btn btn-link p-1" %>
-        <%# link_to "Log In", class: "btn btn-link btn-primary p-1" %>
-      <%# end %>
+        <%= link_to "Sign Out", destroy_user_seassion_path, method: :delete, class: "btn btn-outline-primary rounded-pill px-5 m-3" %>
+      <% else %>
+        <%= link_to "Sign Up", "/users/sign_up", class: "btn btn-outline-primary rounded-pill px-5 m-3" %>
+        <%= link_to "Log In", "/users/sign_in", class: "btn btn-primary text-white rounded-pill px-5 m-3" %>
+      <% end %>
     </li>
   </ul>
 </div>
