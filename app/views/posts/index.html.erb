@@ -21,14 +21,14 @@
 
       <div class="col">
         <% @posts.each do |post| %>
-          <div class="row shadow p-5 mt-5 bg-light rounded">
+          <div class="row shadow p-5 my-4 bg-light rounded">
             <p class="text-secondary">u/<%= post.user.username %> </p>
             <p class="fw-bold fs-3 text-decoration-underline"> <%= post.title %> </p>
             <p class="fs-4"> <%= post.content %> </p>
             <%# need to add comment ability %>
             <div class="text-end">
               <a class="text-end col-1 btn border border-primary rounded-pill text-primary text-decoration-none">Comment</a>
-            <div>
+            </div>
           </div>
         <% end %>
       </div>
