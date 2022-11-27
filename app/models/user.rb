@@ -8,7 +8,7 @@ class User < ApplicationRecord
     
     validates :username, :password, :FirstName, :age, presence: true
     validates :username, length: { maximum: 25 }, uniqueness: true
-    validates :password, length: { minimum: 8 }
+    validates :password, length: { minimum: 6 }
     validates :FirstName, :LastName, length: { maximum: 20 }
     validates :age, numericality: { greater_than: 17 }
 end
