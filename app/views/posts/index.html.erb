@@ -9,18 +9,10 @@
         <% else %>
           <%= link_to "Create", "/users/sign_in", class: "m-2 col-1 btn border border-primary rounded-pill text-primary" %>
         <% end %>
-        <%# <ul class="dropdown-menu">
-          <li class="dropdown-item" href="#">Ireland</li>
-          <li class="dropdown-item" href="#">England</li>
-          <li class="dropdown-item" href="#">America</li>
-          <li class="dropdown-item" href="#">Sanda</li>
-        </ul>
-        <button class="m-2 col-1 btn border border-primary rounded-pill text-primary">New</button>
-        <button class="m-2 col-1 btn border border-primary rounded-pill text-primary">Top</button> %>
       </div>
 
       <div class="col">
-        <% @posts.each do |post| %>
+        <% Post.newest.each do |post| %>
           <div class="row shadow p-5 my-4 bg-light rounded">
             <p class="text-secondary">u/<%= post.user.username %> </p>
             <p class="fw-bold fs-3 text-decoration-underline"> <%= post.title %> </p>
