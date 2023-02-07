@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
 
-    if @comment.save?
+    if @comment.save
       flash[:success] = "Your comment has been posted!"
       redirect_to root_path
     else
