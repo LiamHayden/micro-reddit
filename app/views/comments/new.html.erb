@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row shadow px-4 my-3 bg-light rounded">
+    <h1 class="text-center pt-3">Add a comment</h1>
+
+    <div class="">
+      <%= form_with model: @comment, data: { turbo: false } do |form| %>
+        <div class="py-4">
+          <%= form.label "Comment:", class: "form-label" %>
+          <%= form.text_field :content, class: "form-control", placeholder: "Comment", require: true %>
+        </div>
+
+        <div class="pb-4">
+          <%= form.submit "Post", class: "btn border border-primary rounded-pill text-primary text-decoration-none px-5" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

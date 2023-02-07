@@ -19,7 +19,7 @@
             <p class="fs-4"> <%= post.content %> </p>
             <%# need to add comment ability %>
             <div class="text-end">
-              <a class="text-end col-1 btn border border-primary rounded-pill text-primary text-decoration-none">Comment</a>
+              <%= link_to 'Comment', '/comments/new', class:"text-end col-1 btn border border-primary rounded-pill text-primary text-decoration-none" %>
             </div>
           </div>
         <% end %>
